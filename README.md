@@ -1,9 +1,9 @@
 
-# OpenVitals 🩺👁️
+# openmedlens 🩺👁️
 
-OpenVitals is a privacy-first, local-edge computer vision framework designed to automatically recognize home medical hardware (like blood pressure monitors, glucometers, and pulse oximeters) from image streams and extract their precise alphanumeric readings using lightweight, open-source AI models.
+openmedlens is a privacy-first, local-edge computer vision framework designed to automatically recognize home medical hardware (like blood pressure monitors, glucometers, and pulse oximeters) from image streams and extract their precise alphanumeric readings using lightweight, open-source AI models.
 
-Built specifically for digital health products and telehealth architectures, OpenVitals executes its entire pipeline client-side (100% offline). This ensures strict HIPAA data sovereignty, zero external API fees, and instant response times even on lower-end mobile devices.
+Built specifically for digital health products and telehealth architectures, openmedlens executes its entire pipeline client-side (100% offline). This ensures strict HIPAA data sovereignty, zero external API fees, and instant response times even on lower-end mobile devices.
 
 ---
 
@@ -18,7 +18,7 @@ Built specifically for digital health products and telehealth architectures, Ope
 
 ## 🏗️ Architectural Pipeline
 
-OpenVitals splits computing logic into two modular steps to achieve maximum execution efficiency on mobile NPUs and edge gateways:
+openmedlens splits computing logic into two modular steps to achieve maximum execution efficiency on mobile NPUs and edge gateways:
 
 
 ```
@@ -48,24 +48,24 @@ OpenVitals splits computing logic into two modular steps to achieve maximum exec
 
 #### Python (Server & Backend Automation)
 ```bash
-pip install openvitals
+pip install openmedlens
 
 ```
 
 #### Node.js / React Native (Mobile Client SDK)
 
 ```bash
-npm install @openvitals/core @openvitals/react-native
+npm install @openmedlens/core @openmedlens/react-native
 
 ```
 
 ### Quickstart Example (Python)
 
 ```python
-from openvitals import OpenVitalsEngine
+from openmedlens import openmedlensEngine
 
 # Initialize engine with lightweight optimized edge weights
-engine = OpenVitalsEngine(
+engine = openmedlensEngine(
     detector_model="yolov8n-vitals.onnx",
     ocr_model="qwen2.5-vl-vitals-quantized.gguf",
     execution_provider="cpu" # Or 'cuda', 'coreml', 'nnapi'
@@ -109,7 +109,7 @@ print(result.to_json(indent=2))
 
 ## 📊 Model Zoo & Supported Hardware
 
-OpenVitals targets and isolates specific display structures out of the box. Model checkpoints are hosted publicly on Hugging Face:
+openmedlens targets and isolates specific display structures out of the box. Model checkpoints are hosted publicly on Hugging Face:
 
 | Target Device Class | Core Metrics Extracted | Baseline Model Stack | Edge Size (Quantized) |
 | --- | --- | --- | --- |
@@ -122,8 +122,8 @@ OpenVitals targets and isolates specific display structures out of the box. Mode
 
 ## 🔒 Security, Compliance & Data Sovereignty
 
-* **HIPAA Safe Harbor Compliance:** By design, OpenVitals does not intercept, extract, or transmit any Protected Health Information (PHI). Because it contains no cloud outbound networking libraries, it acts entirely as a zero-risk boundary utility inside telehealth systems.
-* **Air-Gapped Auditing:** Enterprise teams can comfortably deploy OpenVitals inside fully firewalled, air-gapped container groups or private subnets.
+* **HIPAA Safe Harbor Compliance:** By design, openmedlens does not intercept, extract, or transmit any Protected Health Information (PHI). Because it contains no cloud outbound networking libraries, it acts entirely as a zero-risk boundary utility inside telehealth systems.
+* **Air-Gapped Auditing:** Enterprise teams can comfortably deploy openmedlens inside fully firewalled, air-gapped container groups or private subnets.
 
 ---
 
@@ -142,4 +142,4 @@ Please review our `CONTRIBUTING.md` for our dataset annotation standards and tes
 
 ## 📄 License
 
-OpenVitals is open-source software licensed under the **Apache License 2.0**. You are free to modify, distribute, and embed this package inside commercial telehealth systems with zero royalties.
+openmedlens is open-source software licensed under the **Apache License 2.0**. You are free to modify, distribute, and embed this package inside commercial telehealth systems with zero royalties.
